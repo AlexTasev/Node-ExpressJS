@@ -144,13 +144,13 @@ label {
 
 /* submit form css */
 input[type=text], select, textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
     resize: vertical ;
 }
 
@@ -204,17 +204,17 @@ input[type=submit]:hover {
 
 /* succsses message */
 
-#succssesBox{
+#successBox{
    min-width: 100%;
     text-align: center;
     background-color: green;
     border-radius: 4px;
     padding-top:5px;
     padding-bot:5px;
-    
+
 }
 
-#succssesMsg{
+#successMsg{
     display: inline-block;
     color: orange;
     font-size: 25px
@@ -229,12 +229,12 @@ input[type=submit]:hover {
     padding: 1%;
     margin: 1%;
     border-radius: 4px;
-    
+
 }
 
 .moviePoster{
     display: inline-block;
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 .moviePoster:hover{
@@ -250,7 +250,7 @@ input[type=submit]:hover {
     border: 2px solid greenyellow;
     padding: 20px;
     overflow: hidden;
-   
+
 }
 
 .content img {

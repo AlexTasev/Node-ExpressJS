@@ -1,0 +1,11 @@
+{
+  "name": "02_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "VStaykov",
+  "license": "ISC"
+}
