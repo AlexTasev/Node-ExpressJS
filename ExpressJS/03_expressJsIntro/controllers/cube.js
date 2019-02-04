@@ -1,15 +1,15 @@
-const Cube = require('../models/Cube');
+let Cube = require('../models/Cube');
 
-function handleErrrors(err, res, cubeBody) {
+function handleErrors(err, res, cubeBody) {
     let errors = [];
-
-    for (const prop in err.errors) {
-        errors.push(err.errors[prop].message)
+    for (let property in err.errors) {
+        errors.push(err.errors[property].message);
     }
 
     res.locals.globalErrors = errors;
     res.render('cube/create', cubeBody);
 }
+
 
 module.exports = {
     createGet: (req, res) => {
@@ -19,18 +19,25 @@ module.exports = {
         const cubeBody = req.body;
         cubeBody.difficulty = Number(cubeBody.difficulty);
 
-        Cube.create(cubeBody)
-            .then((c) => {
+        Cube
+            .create(cubeBody)
+            .then((cube) => {
                 res.redirect('/');
             })
-            .catch((e) => handleErrrors(e, res, cubeBody));
+            .catch(err => {
+                handleErrors(err, res, cubeBody);
+            });
+
     },
     details: (req, res) => {
+
         const cubeId = req.params.cubeId;
-        Cube.findById(cubeId)
+
+        Cube
+            .findById(cubeId)
             .then((cube) => {
-                res.render('cube/details', cube)
+                res.render('cube/details', cube);
             })
-            .catch((e) => handleErrrors(e, res));
+            .catch((e) => console.log(e));
     }
-}
+};
